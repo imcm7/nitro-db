@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "paths": {
+      "~": [
+        ".."
+      ],
+      "~/*": [
+        "../*"
+      ]
+    }
+  },
+  "extends": "./.nitro/types/tsconfig.json"
+}

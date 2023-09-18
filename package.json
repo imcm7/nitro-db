@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "nitropack prepare",
+    "dev": "nitropack dev",
+    "build": "nitropack build",
+    "preview": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^5.8.0",
+    "@mikro-orm/mariadb": "^5.8.0",
+    "@mikro-orm/migrations": "^5.8.0",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.0",
+    "nitropack": "latest",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "^5.8.0"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "tsConfigPath": "./tsconfig.mikro-orm.cli.json",
+    "configPaths": [
+      "./server/data-source.js",
+      "./server/data-source.ts"
+    ]
+  }
+}
